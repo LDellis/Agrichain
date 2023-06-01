@@ -1,6 +1,6 @@
 Lancer le project : 
-cd agrichain
-npm i (Juste au 1er lancement)
+cd agrichain ->
+npm i (Juste au 1er lancement) ->
 npm start
 
 
