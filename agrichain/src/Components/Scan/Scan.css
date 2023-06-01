@@ -1,0 +1,10 @@
+
+.ScanTitle {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.InputExemple {
+    display: flex !important;
+    justify-content: center !important;
+}
