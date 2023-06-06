@@ -1,16 +1,26 @@
-import React, { useState } from 'react';
-import './Scan.css';
-import TextField from '@material-ui/core/TextField';
+import React from 'react';
+import QrReader from 'react-qr-reader';
 
 function Scan() {
-  const [TextFieldValue, setTextFieldValue] = useState("")
+  const handleScan = (data) => {
+    if (data) {
+      console.log(data);
+    }
+  };
+
+  const handleError = (error) => {
+    console.error(error);
+  };
+
   return (
-    <div className="Scan">
-        <h1 className="ScanTitle">Bienvenue sur la page de scan</h1>
-        {/* Input EXEMPLE WITH MUI */}
-        <div className="InputExemple">
-          <TextField id="filled-basic" label="Filled" variant="filled" value={TextFieldValue} onChange={event => setTextFieldValue(event.target.value) /**change la valeur de la variable en direct**/}/>
-        </div>
+    <div>
+      <h1>QR Code Scanner</h1>
+      <QrReader
+        delay={300}
+        onError={handleError}
+        onScan={handleScan}
+        style={{ width: '100%' }}
+      />
     </div>
   );
 }

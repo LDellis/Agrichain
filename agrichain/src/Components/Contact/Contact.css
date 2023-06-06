@@ -1,0 +1,17 @@
+.Contact {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    text-align: center;
+  }
+  
+  .Contact p {
+    margin: 0;
+    padding: 5px 0;
+  }
+  
+  .Contact strong {
+    font-weight: bold;
+  }
+  

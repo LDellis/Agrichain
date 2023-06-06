@@ -1,24 +1,32 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-// import des composants dans le dossier / composant, crée en des nouveaux et importe les pour les ajouter sur les routeset avoir une nouvelle page
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Components/Home/Home';
-import Scan from './Components/Scan/Scan'
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Scan from './Components/Scan/Scan';
+import Contact from './Components/Contact/Contact';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <React.StrictMode>
-      {/* Index avec router : permet de gerer tes routes dans l'url la route * redirige toutes les non definies sur / */}
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />}>
-                </Route>
-                <Route path="/scan" element={<Scan />}>
-                </Route>
-                <Route path="*" element={<Navigate to="/" />}>
-                </Route>
-            </Routes>
-        </BrowserRouter>
-    </React.StrictMode>
+ReactDOM.render(
+  <Router>
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/scan">Scan</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
+    </nav>
+
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/scan" element={<Scan />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  </Router>,
+  document.getElementById('root')
 );
