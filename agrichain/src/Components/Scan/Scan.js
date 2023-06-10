@@ -1,5 +1,5 @@
 import React from 'react';
-import QrReader from 'react-qr-reader';
+import {QrReader} from 'react-qr-reader';
 
 function Scan() {
   const handleScan = (data) => {
@@ -19,6 +19,7 @@ function Scan() {
         delay={300}
         onError={handleError}
         onScan={handleScan}
+        onResult={handleScan}
         style={{ width: '100%' }}
       />
     </div>

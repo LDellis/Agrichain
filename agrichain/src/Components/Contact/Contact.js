@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Contact.css';
-import TextField from '@material-ui/core/TextField';
+// import TextField from '@mui/material/TextField';
 
 function Scan() {
-  const [TextFieldValue, setTextFieldValue] = useState("")
+  // const [TextFieldValue, setTextFieldValue] = useState("")
   return (
     <div className="Scan">
+        {/* <TextField id="outlined-basic" label="Outlined" variant="outlined" /> */}
         <h1 className="ScanTitle">Contact</h1>
         <h3>Notre équipe reste à votre disposition aux coordonnées suivantes:</h3>
         <div className='Contact'>
